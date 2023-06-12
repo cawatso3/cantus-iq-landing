@@ -1,0 +1,63 @@
+/* Home.module.css */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.centeredGrid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 24px;
+  color: #1da1f2;
+  margin-bottom: 20px;
+}
+
+.link {
+  text-decoration: none;
+  color: #1da1f2;
+}
+
+.section {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+}
+
+.centeredSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.sectionTitle {
+  font-size: 20px;
+  color: #14171a;
+  margin-bottom: 10px;
+}
+
+.productColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.productTitle {
+  font-size: 18px;
+  color: #1da1f2;
+}
+
+.sectionText {
+  font-size: 16px;
+  color: #14171a;
+}
