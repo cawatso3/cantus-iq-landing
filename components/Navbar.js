@@ -1,11 +1,15 @@
-import { AppBar, Toolbar, Typography, Button } from '@mui/material';
+import React from 'react';
+import AppBar from '@mui/material/AppBar';
+import Toolbar from '@mui/material/Toolbar';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
 
-export default function Navbar() {
+function Navbar() {
   return (
-    <AppBar position="static">
+    <AppBar style={{backgroundColor: "#87CEEB"}} position="static">
       <Toolbar>
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-          Cantus.IQ
+          CantusIQ
         </Typography>
         <Button color="inherit" href="/solutions">
           Solutions
@@ -13,9 +17,15 @@ export default function Navbar() {
         <Button color="inherit" href="/about">
           About
         </Button>
-        <Button color="inherit">Request a Demo</Button>
-        <Button color="inherit">Sign Up</Button>
+        <Button color="inherit" variant="contained">
+          Request Demo
+        </Button>
+        <Button color="inherit" variant="outlined">
+          Sign Up
+        </Button>
       </Toolbar>
     </AppBar>
   );
 }
+
+export default Navbar;
