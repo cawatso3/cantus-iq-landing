@@ -3,6 +3,7 @@ import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import styles from '../styles/Home.module.css';
 
 function Navbar() {
   return (
@@ -17,10 +18,10 @@ function Navbar() {
         <Button color="inherit" href="/about">
           About
         </Button>
-        <Button color="inherit" variant="contained">
+        <Button color="inherit" variant="contained" sx={{marginRight: '10px', borderRadius: '50px', backgroundColor: '#FF7518'}}>
           Request Demo
         </Button>
-        <Button color="inherit" variant="outlined">
+        <Button color="inherit" variant="outlined" sx={{borderRadius:'50px'}}>
           Sign Up
         </Button>
       </Toolbar>
