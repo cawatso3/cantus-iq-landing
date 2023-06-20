@@ -64,15 +64,37 @@ const LandingPage = () => {
       {/* Row 3 */}
       <Grid item xs={4} className={styles.section}>
         <h1 className={styles.sectionTitle}>Athletes</h1>
-        {/* Add your content here */}
+        <p>Empowering athletes in the digital era with a comprehensive platform to optimize operations & secure brand deals.</p>
+        <ul>
+  <li>Automate Tasks</li>
+  <li>Streamline Operations</li>
+  <li>NCAA &amp; League Compliance</li>
+  <li>Increase Fan Engagement</li>
+  <li>Launch &amp; Merchandise</li>
+</ul>
       </Grid>
       <Grid item xs={4} className={styles.section}>
         <h1 className={styles.sectionTitle}>Influencers</h1>
-        {/* Add your content here */}
+        <p>Scale with confidence by leveraging data and insights to amplify your influence and digital impact .</p>
+        <ul>
+  <li>Negotiate Contracts</li>
+  <li>Integrate Across Socials</li>
+  <li>Community Management</li>
+  <li>Discover Monetization Opportunities</li>
+  <li>Across Marketing Themes &amp; Templates</li>
+</ul>
+
       </Grid>
       <Grid item xs={4} className={styles.section}>
         <h1 className={styles.sectionTitle}>Artists</h1>
-        {/* Add your content here */}
+        <p>Experience the power of a centralized platform designed to support independent musicians with all the essential tools needed to manage your career and support your craft.</p>
+        <ul>
+  <li>Data-Driven Decision Making</li>
+  <li>Identify Key Markets</li>
+  <li>Effective Negotiation Tools</li>
+  <li>Direct Music Sales</li>
+  <li>Merchandise Management</li>
+</ul>
       </Grid>
 
       {/* Row 4 */}
@@ -80,7 +102,11 @@ const LandingPage = () => {
         <p className={styles.sectionText}>
           Discover exciting opportunities that will take you over the edge, craft captivating campaigns that resonate with your audience, and unlock the true joy of creating. With CantusIQ, we're not just another platform; we're your partner on this thrilling adventure.
         </p>
-        {/* Add your content here */}
+        <Grid item xs={6} sx={{marginTop: '80px'}}>
+          <Button sx={{borderRadius: '50px', marginRight: '10px'}} variant="outlined">Request a Demo</Button>
+          <Button sx={{borderRadius: '50px'}} variant="outlined">Get Started</Button>
+        </Grid>
+
       </Grid>
     </Grid>
     </Container>
