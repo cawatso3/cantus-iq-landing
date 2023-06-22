@@ -8,6 +8,13 @@
     font-family: 'Lato', sans-serif;
   }
 
+  .fullWidthContainer {
+    max-width: '100%';
+    width: '100%';
+    margin: 0;
+    padding: 0
+  }
+
 .centeredGrid {
   display: flex;
   justify-content: center;
@@ -58,6 +65,7 @@
   color: #4B0082;
   margin-bottom: 10px;
   font-family: 'Lato', sans-serif;
+  text-align: center;
 }
 
 .productColumn {
@@ -91,4 +99,38 @@
 .cardStyle {
   font-family: 'Lato', sans-serif;
   text-align: center;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 10px;
+  }
+
+  .section {
+    padding: 10px;
+  }
+
+  .blueSection {
+    padding: 10px;
+  }
+
+  .sectionTitle {
+    font-size: 18px;
+  }
+
+  .productColumn {
+    padding-bottom: 10px;
+  }
+
+  .productTitle {
+    font-size: 16px;
+  }
+
+  .sectionText {
+    font-size: 14px;
+  }
+
+  .cardStyle {
+    font-size: 14px;
+  }
 }

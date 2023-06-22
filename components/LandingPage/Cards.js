@@ -8,11 +8,11 @@ import styles from '../../styles/Home.module.css';
 
 export function Insights() {
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card xs={12} sm={6} lg={3} sx={{minHeight:'445px'}}>
       <CardActionArea>
         <CardMedia
           component="img"
-          height="320"
+          height="250"
           image="/insights.png"
           alt="Insights.IQ"
         />
@@ -21,7 +21,7 @@ export function Insights() {
             Insights.IQ
           </Typography>
           <Typography className={styles.cardStyle} variant="body2" color="text.secondary" component="p">
-          Unleash the power of data with InsightsIQ, the ultimate analytics tool for creators, enabling informed decisions, optimized strategies, and exponential growth. 
+          Gain a competitive edge in your industry by unleashing the power of data with InsightsIQ; the ultimate analytics tool for creators, enabling informed decisions, optimized strategies, and exponential growth. 
          
           </Typography>
         </CardContent>
@@ -32,11 +32,11 @@ export function Insights() {
 
 export  function Brand() {
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card xs={12} sm={6} lg={3} sx={{minHeight:'445px'}}>
       <CardActionArea>
         <CardMedia
           component="img"
-          height="320"
+          height="250"
           image="/brand.png"
           alt="Brand.IQ"
         />
@@ -55,11 +55,11 @@ export  function Brand() {
 
 export  function Deal() {
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card xs={12} sm={6} lg={3} sx={{minHeight:'445px'}}>
       <CardActionArea>
         <CardMedia
           component="img"
-          height="320"
+          height="250"
           image="/deal.png"
           alt="Deal.IQ"
         />
@@ -78,11 +78,11 @@ export  function Deal() {
 
 export function Commerce() {
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card xs={12} sm={6} lg={3} sx={{minHeight:'445px'}}>
       <CardActionArea>
         <CardMedia
           component="img"
-          height="320"
+          height="250"
           image="/commerce.png"
           alt="Commerce"
          
