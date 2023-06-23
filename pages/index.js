@@ -1,11 +1,13 @@
 import React from 'react';
-import { Container, CssBaseline, Grid} from '@mui/material';
+import { Card, CardActionArea, CardMedia, Container, CssBaseline, Grid} from '@mui/material';
 import styles from '../styles/Home.module.css';
 import Image from 'next/image';
 import {Insights, Brand, Deal, Commerce} from '../components/LandingPage/Cards';
 import Navbar from '../components/Navbar';
 import Button from '@mui/material/Button';
 import { flexbox } from '@mui/system';
+import Footer from '../components/LandingPage/Footer';
+
 
 
 
@@ -14,11 +16,11 @@ const LandingPage = () => {
   return (
 <>
    <CssBaseline />
-    <Container sx={{borderStyle: 'solid', borderColor:'red', width:'100%' }} maxWidth={'100%'}  className={`${styles.fullWidthContainer} MuiContainer-fixed`} disableGutters >
+    <Container sx={{ width:'100%'}} maxWidth={'100%'}  className={`${styles.fullWidthContainer} MuiContainer-fixed`} disableGutters >
     <Grid container  spacing={2}>
       <Navbar />
       {/* Row 1 */}
-      <Grid item xs={12} md={4} lg={6} className={styles.section} sx={{textAlign: 'center'}}>
+      <Grid item xs={12} md={12} lg={12} className={styles.section} sx={{textAlign: 'center'}}>
         <h3 className={styles.sectionTitle}>
           The #1 CRM Platform For Industry <span>Creators</span>
         </h3>
@@ -26,16 +28,14 @@ const LandingPage = () => {
        <h4>Powered by AI & Data, CantusIQ offers a comprehensive set of tools to manage, automate, and grow your business.</h4>
         {/* Add your content here */}
         
-        <Grid item xs={6}  sx={{marginTop: '80px', margin: 'auto', width:'50%'}} >
-          <Button sx={{borderRadius: '50px', marginRight: '10px'}} variant="outlined">Request a Demo</Button>
-          <Button sx={{borderRadius: '50px'}} variant="outlined">Get Started</Button>
+        <Grid item xs={6}  sx={{marginTop: '80px', margin: 'auto', width:'50%',  display: 'block', justifyContent: 'center' }}  >
+          <Button sx={{borderRadius: '50px', marginTop:'10px', marginRight:'10px'}} variant="outlined">Request a Demo</Button>
+          <Button sx={{borderRadius: '50px', marginTop:'10px'}} variant="outlined">Get Started</Button>
         </Grid>
       </Grid>
       <Grid item xs={12} md={6}  className={styles.section}>
         {/* Second column */}
         
-      {/* <Image src="/cantus.png" alt="Description of the image" width={200} height={200} /> */}
-    
       </Grid>
 
       {/* Row 2 */}
@@ -124,6 +124,8 @@ const LandingPage = () => {
 
       </Grid>
     </Grid>
+
+    <Footer />
   </Container>
 
   </>

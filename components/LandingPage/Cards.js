@@ -15,6 +15,7 @@ export function Insights() {
           height="250"
           image="/insights.png"
           alt="Insights.IQ"
+          sx={{objectFit:'contain'}}
         />
         <CardContent>
           <Typography className={styles.cardStyle} gutterBottom variant="h5" component="div" style={{color:"#4B0082"}} >
@@ -39,6 +40,7 @@ export  function Brand() {
           height="250"
           image="/brand.png"
           alt="Brand.IQ"
+          sx={{objectFit:'contain'}}
         />
         <CardContent>
           <Typography className={styles.cardStyle} gutterBottom variant="h5" component="div" style={{color:"#4B0082"}}>
@@ -62,6 +64,7 @@ export  function Deal() {
           height="250"
           image="/deal.png"
           alt="Deal.IQ"
+          sx={{objectFit:'contain'}}
         />
         <CardContent>
           <Typography className={styles.cardStyle} gutterBottom variant="h5" component="div" style={{color:"#4B0082"}}>
@@ -85,6 +88,7 @@ export function Commerce() {
           height="250"
           image="/commerce.png"
           alt="Commerce"
+          sx={{objectFit:'contain'}}
          
         />
         <CardContent>
