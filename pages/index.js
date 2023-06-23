@@ -5,6 +5,7 @@ import Image from 'next/image';
 import {Insights, Brand, Deal, Commerce} from '../components/LandingPage/Cards';
 import Navbar from '../components/Navbar';
 import Button from '@mui/material/Button';
+import Footer from '../components/LandingPage/Footer';
 
 
 
@@ -109,6 +110,7 @@ const LandingPage = () => {
 
       </Grid>
     </Grid>
+    <Footer />
     </Container>
    
   );
