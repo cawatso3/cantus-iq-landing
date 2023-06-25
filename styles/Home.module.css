@@ -45,7 +45,7 @@
 }
 
 .blueSection {
-  background-color: #87CEEB;
+  background-color: #000041;
   /* border-radius: 8px; */
   padding: 0;
   /* border: 1px solid #ccc; */
@@ -74,7 +74,7 @@
   align-items: center;
   margin-bottom: 10px;
   padding-bottom: 20px;
-  background-color: #87CEEB;
+  background-color: #000041;
   /* border: 0.5px solid black; */
   font-family: 'Lato', sans-serif;
 }
@@ -92,7 +92,7 @@
 }
 
 .sectionBackground {
-  background-color: #87CEEB;
+  background-color: #000041;
   font-family: 'Lato', sans-serif;
 }
 

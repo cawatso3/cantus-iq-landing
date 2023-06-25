@@ -1,39 +1,3 @@
-// import React from 'react';
-// import AppBar from '@mui/material/AppBar';
-// import Toolbar from '@mui/material/Toolbar';
-// import Button from '@mui/material/Button';
-// import Typography from '@mui/material/Typography';
-// import styles from '../styles/Home.module.css';
-
-// function Navbar() {
-//   return (
-//     <AppBar style={{backgroundColor: "#87CEEB"}} position="static">
-//       <Toolbar>
-//         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-//           CantusIQ
-//         </Typography>
-//         <Button color="inherit" href="/solutions">
-//           Solutions
-//         </Button>
-//         <Button color="inherit" href="/about">
-//           About
-//         </Button>
-//         <Button color="inherit" variant="contained" sx={{marginRight: '10px', borderRadius: '50px', backgroundColor: '#FF7518'}}>
-//           Request Demo
-//         </Button>
-//         <Button color="inherit" variant="outlined" sx={{borderRadius:'50px'}}>
-//           Sign Up
-//         </Button>
-//       </Toolbar>
-//     </AppBar>
-//   );
-// }
-
-// export default Navbar;
-
-
-
-
 import React, { useState } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
@@ -92,7 +56,7 @@ function Navbar() {
   );
 
   return (
-    <AppBar sx={{width: '100%'}} style={{backgroundColor: "#87CEEB"}} position="static">
+    <AppBar sx={{width: '100%', backgroundColor:'white', border:'2px solid black', margin:'8px 0', color: 'black'}} position="static">
       <Toolbar>
         <IconButton
           edge="start"
@@ -106,9 +70,13 @@ function Navbar() {
         <Drawer open={isOpen} onClose={toggleDrawer(false)}>
           {list()}
         </Drawer>
-        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+        <Typography variant="h3" component="div" sx={{ flexGrow: 1 }}>
           CantusIQ
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+          The Highest Voice
         </Typography>
+        </Typography>
+       
         <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
           <Button color="inherit" href="/solutions">
             Solutions

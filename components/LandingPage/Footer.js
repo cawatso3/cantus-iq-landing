@@ -18,11 +18,11 @@ export default function Footer() {
     <Box
       component="footer"
       sx={{
-        backgroundColor: "#4E39C6"
+        backgroundColor: "#000041"
     }}
     position="static"
     >
-      <Container maxWidth="xl">
+      <Container maxWidth="100%">
         <Grid sx={{marginTop:'16px'}} container spacing={5}>
           <Grid item xs={10} sm={2}>
             <Button className={styles.sectionFooter} color="inherit" href="/about">

@@ -2,7 +2,7 @@ import React from 'react';
 import { Card, CardActionArea, CardMedia, Container, CssBaseline, Grid} from '@mui/material';
 import styles from '../styles/Home.module.css';
 import Image from 'next/image';
-import {Insights, Brand, Deal, Commerce} from '../components/LandingPage/Cards';
+import {Insights, Brand, Deal, Commerce, Athletes, Influencers, Artists} from '../components/LandingPage/Cards';
 import Navbar from '../components/Navbar';
 import Button from '@mui/material/Button';
 import { flexbox } from '@mui/system';
@@ -29,8 +29,14 @@ const LandingPage = () => {
         {/* Add your content here */}
         
         <Grid item xs={6}  sx={{marginTop: '80px', margin: 'auto', width:'50%',  display: 'block', justifyContent: 'center' }}  >
-          <Button sx={{borderRadius: '50px', marginTop:'10px', marginRight:'10px'}} variant="outlined">Request a Demo</Button>
-          <Button sx={{borderRadius: '50px', marginTop:'10px'}} variant="outlined">Get Started</Button>
+          <Button sx={{borderRadius: '50px', marginTop:'10px', marginRight:'10px', backgroundColor:'#FF7518', color:'white', border:'1px solid #FF7518', 
+          '&:hover': {
+      backgroundColor: '#4B0082',
+      border: 'none',
+    },}} variant="contained">Request a Demo</Button>
+          <Button sx={{borderRadius: '50px', marginTop:'10px', border:'1px solid #FF7518', color:'#FF7518',  '&:hover': {
+      borderColor: '#4B0082',
+    },}} variant="outlined">Get Started</Button>
         </Grid>
       </Grid>
       <Grid item xs={12} md={6}  className={styles.section}>
@@ -68,63 +74,38 @@ const LandingPage = () => {
         {/* Add your content here */}
       </Grid>
       
-    
-
       {/* Row 3 */}
       <Grid item xs={12} className={`${styles.blueSection} ${styles.centeredSection} ${styles.sectionBackground}`}>
         <p style={{color:'white', fontSize: '40px'}}> Industries</p>
       </Grid>
     
-      <Grid item xs={12} sm={4} className={styles.section} sx={{textAlign: 'center'}}>
-        <div style={{minHeight: '140px'}}>
-        <h1 className={styles.sectionTitle}>Athletes</h1>
-        <p>Empowering athletes in the digital era with a comprehensive platform to optimize operations & secure brand deals.</p>
-        </div>
-        <ul>
-  <li>Automate Tasks</li>
-  <li>Streamline Operations</li>
-  <li>NCAA &amp; League Compliance</li>
-  <li>Increase Fan Engagement</li>
-  <li>Launch &amp; Merchandise</li>
-</ul>
+      <Grid item xs={12} sm={4} sx={{backgroundColor: '#000041', marginBottom:'16px', paddingBottom:'16px'}}>
+        <Athletes />
       </Grid>
-      <Grid item xs={12} sm={4}  className={styles.section} sx={{textAlign: 'center'}}>
-      <div style={{minHeight: '140px'}}>
-        <h1 className={styles.sectionTitle}>Influencers</h1>
-        <p>Scale with confidence by leveraging data and insights to amplify your influence and digital impact .</p>
-      </div>
-        <ul>
-  <li>Negotiate Contracts</li>
-  <li>Integrate Across Socials</li>
-  <li>Community Management</li>
-  <li>Discover Monetization Opportunities</li>
-  <li>Across Marketing Themes &amp; Templates</li>
-</ul>
+      
+      <Grid item xs={12} sm={4} sx={{backgroundColor: '#000041', marginBottom:'16px', paddingBottom:'16px'}}>
+        <Influencers  />
+      </Grid>
 
-      </Grid>
-      <Grid item xs={12} sm={4} className={styles.section} sx={{textAlign: 'center'}}>
-      <div style={{minHeight: '140px'}}>
-        <h1 className={styles.sectionTitle}>Artists</h1>
-        <p>Experience the power of a centralized platform designed to support independent musicians with all the essential tools needed to manage your career and support your craft.</p>
-       </div>
-       <ul>
-  <li>Data-Driven Decision Making</li>
-  <li>Identify Key Markets</li>
-  <li>Effective Negotiation Tools</li>
-  <li>Direct Music Sales</li>
-  <li>Merchandise Management</li>
-</ul>
+      <Grid item xs={12} sm={4}sx={{backgroundColor: '#000041', marginBottom:'16px', paddingBottom:'16px'}}>
+        <Artists />
       </Grid>
      
 
       {/* Row 4 */}
-      <Grid item xs={12} sx={{textAlign: 'center'}}>
+      <Grid item xs={12} sx={{textAlign:'center'}}>
         <p style={{fontWeight:'bold', fontSize:'30px'}}>
           Discover exciting opportunities that will take you over the edge, craft captivating campaigns that resonate with your audience, and unlock the true joy of creating. With CantusIQ, we're not just another platform; we're your partner on this thrilling adventure.
         </p>
-        <Grid item xs={12} sx={{marginTop: '10px', textAlign: 'center'}} >
-          <Button sx={{borderRadius: '50px', marginRight: '10px', borderColor: '#FF7518'}} variant="outlined">Request a Demo</Button>
-          <Button sx={{borderRadius: '50px', borderColor: '#FF7518'}} variant="outlined">Get Started</Button>
+        <Grid item xs={6}  sx={{marginTop: '80px', margin: 'auto', width:'50%',  display: 'block', justifyContent: 'center' }}  >
+        <Button sx={{borderRadius: '50px', marginTop:'10px', marginRight:'10px', backgroundColor:'#FF7518', color:'white', border:'1px solid #FF7518', 
+          '&:hover': {
+      backgroundColor: '#4B0082',
+      border: 'none',
+    },}} variant="contained">Request a Demo</Button>
+          <Button sx={{borderRadius: '50px', marginTop:'10px', border:'1px solid #FF7518', color:'#FF7518',  '&:hover': {
+      borderColor: '#4B0082',
+    },}} variant="outlined">Get Started</Button>
         </Grid>
 
       </Grid>
