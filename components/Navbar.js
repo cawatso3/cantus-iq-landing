@@ -56,7 +56,7 @@ function Navbar() {
   );
 
   return (
-    <AppBar sx={{width: '100%', backgroundColor:'white', border:'2px solid black', margin:'8px 0', color: 'black'}} position="static">
+    <AppBar sx={{width: '100%', backgroundColor:'white', border:'2px solid black', marginTop:'8px', color: 'black'}} position="static">
       <Toolbar>
         <IconButton
           edge="start"
@@ -70,9 +70,9 @@ function Navbar() {
         <Drawer open={isOpen} onClose={toggleDrawer(false)}>
           {list()}
         </Drawer>
-        <Typography variant="h3" component="div" sx={{ flexGrow: 1 }}>
+        <Typography variant="h5" component="div" sx={{ flexGrow: 1 }}>
           CantusIQ
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+          <Typography  component="div" sx={{ flexGrow: 1, fontSize: '12px', color:'#4B0082' }}>
           The Highest Voice
         </Typography>
         </Typography>

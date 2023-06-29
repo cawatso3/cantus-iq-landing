@@ -8,20 +8,20 @@ import styles from '../../styles/Home.module.css';
 
 export function Insights() {
   return (
-    <Card xs={12} sm={6} lg={3} sx={{minHeight:'445px'}}>
+    <Card xs={12} sm={6} lg={3} sx={{minHeight:'445px', backgroundColor:'#000041'}}>
       <CardActionArea>
         <CardMedia
           component="img"
           height="250"
           image="/insights.png"
           alt="Insights.IQ"
-          sx={{objectFit:'contain'}}
+          sx={{objectFit:'cover'}}
         />
         <CardContent>
-          <Typography className={styles.cardStyle} gutterBottom variant="h5" component="div" style={{color:"#4B0082"}} >
+          <Typography className={styles.cardStyle} gutterBottom variant="h5" component="div" sx={{color:"white"}} >
             Insights.IQ
           </Typography>
-          <Typography className={styles.cardStyle} variant="body2" color="text.primary" component="p">
+          <Typography className={styles.cardStyle} variant="body2" sx={{color:'white'}}>
           Gain a competitive edge in your industry by unleashing the power of data with InsightsIQ; the ultimate analytics tool for creators, enabling informed decisions, optimized strategies, and exponential growth. 
          
           </Typography>
@@ -33,20 +33,20 @@ export function Insights() {
 
 export  function Brand() {
   return (
-    <Card xs={12} sm={6} lg={3} sx={{minHeight:'445px'}}>
+    <Card xs={12} sm={6} lg={3} sx={{minHeight:'445px', backgroundColor:'#000041'}}>
       <CardActionArea>
         <CardMedia
           component="img"
           height="250"
           image="/brand.png"
           alt="Brand.IQ"
-          sx={{objectFit:'contain'}}
+          sx={{objectFit:'cover'}}
         />
         <CardContent>
-          <Typography className={styles.cardStyle} gutterBottom variant="h5" component="div" style={{color:"#4B0082"}}>
+          <Typography className={styles.cardStyle} gutterBottom variant="h5" component="div" sx={{color:"white"}}>
             Brand.IQ
           </Typography>
-          <Typography className={styles.cardStyle} variant="body2" color="text.primary">
+          <Typography className={styles.cardStyle} variant="body2" sx={{color:'white'}}>
           Craft compelling campaigns, seize new opportunities, and amplify your brand's growth potential with data-driven insights, empowering creators to maximize their brand's reach and increase collaboration opportunities.
           </Typography>
         </CardContent>
@@ -57,20 +57,20 @@ export  function Brand() {
 
 export  function Deal() {
   return (
-    <Card xs={12} sm={6} lg={3} sx={{minHeight:'445px'}}>
+    <Card xs={12} sm={6} lg={3} sx={{minHeight:'445px', backgroundColor:'#000041'}}>
       <CardActionArea>
         <CardMedia
           component="img"
           height="250"
           image="/deal.png"
           alt="Deal.IQ"
-          sx={{objectFit:'contain'}}
+          sx={{objectFit:'cover'}}
         />
         <CardContent>
-          <Typography className={styles.cardStyle} gutterBottom variant="h5" component="div" style={{color:"#4B0082"}}>
+          <Typography className={styles.cardStyle} gutterBottom variant="h5" component="div" sx={{color:"white"}}>
             Deal.IQ
           </Typography>
-          <Typography className={styles.cardStyle} variant="body2" color="text.primary">
+          <Typography className={styles.cardStyle} variant="body2" sx={{color:'white'}}>
           Unlock deal-making excellence with DealIQ, the advanced contract management tool that simplifies negotiations, enhances collaboration, and maximizes the value of every business agreement.
           </Typography>
         </CardContent>
@@ -81,21 +81,21 @@ export  function Deal() {
 
 export function Commerce() {
   return (
-    <Card xs={12} sm={6} lg={3} sx={{minHeight:'445px'}}>
+    <Card xs={12} sm={6} lg={3} sx={{minHeight:'445px', backgroundColor:'#000041'}}>
       <CardActionArea>
         <CardMedia
           component="img"
           height="250"
           image="/commerce.png"
           alt="Commerce"
-          sx={{objectFit:'contain'}}
+          sx={{objectFit:'cover'}}
          
         />
         <CardContent>
-          <Typography className={styles.cardStyle} gutterBottom variant="h5" component="div" style={{color:"#4B0082"}}>
+          <Typography className={styles.cardStyle} gutterBottom variant="h5" component="div" sx={{color:"white"}}>
             Commerce.IQ
           </Typography>
-          <Typography className={styles.cardStyle} variant="body2" color="text.primary">
+          <Typography className={styles.cardStyle} variant="body2" sx={{color:'white'}}>
           Revolutionize your online business with CommerceIQ, the all-in-one e-commerce solution designed to streamline operations, optimize sales performance, and deliver seamless customer experiences.
           </Typography>
         </CardContent>
@@ -106,16 +106,16 @@ export function Commerce() {
 
 export function Athletes() {
   return (
-    <Card xs={12} sm={6} lg={3}>
+    <Card xs={12} sm={6} lg={3} sx={{backgroundColor:'#000041'}}>
        <CardContent>
-          <Typography className={styles.cardStyle} gutterBottom variant="h5" component="div" style={{color:"#4B0082"}}>
+          <Typography className={styles.cardStyle} gutterBottom variant="h4" component="div" style={{color:"white"}}>
             Athletes
           </Typography>
-          <Typography className={styles.cardStyle} variant="body2" color="text.primary" sx={{minHeight:'60px'}} >
+          <Typography className={styles.cardStyle} variant="body2" sx={{minHeight:'60px', color:'white'}} >
           Empowering athletes in the digital era with a comprehensive platform to optimize operations & secure brand deals.
           </Typography>
         <div>
-        <ul >
+        <ul style={{textAlign:'center', listStylePosition:'inside', color:'white', listStyleType: 'none', marginTop:'8px', padding:'0', fontFamily:`'Lato', sans-serif`}} >
           <li>Automate Tasks</li>
           <li>Streamline Operations</li>
           <li>NCAA &amp; League Compliance</li>
@@ -133,16 +133,16 @@ export function Athletes() {
 export function Influencers() {
   return (
 
-    <Card xs={12} sm={6} lg={3} >
+    <Card xs={12} sm={6} lg={3} sx={{backgroundColor:'#000041'}}>
         <CardContent >
-          <Typography className={styles.cardStyle} gutterBottom variant="h5" component="div" style={{color:"#4B0082"}}>
+          <Typography className={styles.cardStyle} gutterBottom variant="h4" component="div" sx={{color:"white"}}>
             Influencers
           </Typography>
-          <Typography className={styles.cardStyle} variant="body2" color="text.primary" sx={{minHeight:'60px'}}>
+          <Typography className={styles.cardStyle} variant="body2" sx={{minHeight:'60px', color:"white"}}>
           Scale with confidence by leveraging data and insights to amplify your influence and digital impact.
           </Typography>
       <div>
-      <ul>
+      <ul style={{textAlign:'center', listStylePosition:'inside', color:'white', listStyleType: 'none', marginTop:'8px', padding:'0', fontFamily:`'Lato', sans-serif`}}>
         <li>Negotiate Contracts</li>
         <li>Integrate Across Socials</li>
         <li>Community Management</li>
@@ -159,17 +159,17 @@ export function Influencers() {
 
 export function Artists() {
   return (
-    <Card xs={12} sm={6} lg={3}>
+    <Card xs={12} sm={6} lg={3} sx={{backgroundColor:'#000041'}}>
         <CardContent >
-          <Typography className={styles.cardStyle} gutterBottom variant="h5" component="div" style={{color:"#4B0082"}}>
+          <Typography className={styles.cardStyle} gutterBottom variant="h4" component="div" sx={{color:"white"}}>
             Artists
           </Typography>
-          <Typography className={styles.cardStyle} variant="body2" color="text.primary" sx={{minHeight:'60px'}}>
+          <Typography className={styles.cardStyle} variant="body2" sx={{minHeight:'60px', color:'white'}}>
           Experience the power of a centralized platform designed to support independent musicians with all the essential tools needed to manage your career and support your craft.
           </Typography>
 
           <div>
-          <ul>
+          <ul style={{textAlign:'center', listStylePosition:'inside', color:'white', listStyleType: 'none', marginTop:'8px', padding:'0', fontFamily:`'Lato', sans-serif`}}>
             <li>Data-Driven Decision Making</li>
             <li>Identify Key Markets</li>
             <li>Effective Negotiation Tools</li>
