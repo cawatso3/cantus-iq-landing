@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardActionArea, CardMedia, Container, CssBaseline, Grid } from '@mui/material';
+import { Container, CssBaseline, Grid, Typography } from '@mui/material';
 import styles from '../styles/Home.module.css';
 import Image from 'next/image';
 import { Insights, Brand, Deal, Commerce, Athletes, Influencers, Artists } from '../components/LandingPage/Cards';
@@ -33,6 +33,23 @@ const LandingPage = () => {
     };
   }, [text]);
 
+  const [currentImage, setCurrentImage] = useState(0);
+  const images = [
+    '/sing.png',
+    '/hoop.png',
+    '/livestream.png',
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImage((prevImage) => (prevImage + 1) % images.length);
+    }, 3500);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
+
 
   return (
     <>
@@ -42,7 +59,7 @@ const LandingPage = () => {
           <Navbar />
           {/* Row 1 */}
 
-          <Grid item xs={12} md={12} lg={12} className={`${styles.section} ${styles.carousel}`} sx={{ textAlign: 'center' }}>
+          <Grid item xs={12} md={12} lg={12} className={`${styles.section} ${styles.carousel} `} sx={{ textAlign: 'center' }} style={{ backgroundImage: `url(${images[currentImage]})` }}>
 
             <p className={styles.sectionTitle} style={{ zIndex: 1 }}>
               The #1 CRM Platform For Industry {'  '} <span className={styles.highlightText} style={{ width: '80px', display: 'inline-block' }}>{text}</span>
@@ -128,16 +145,22 @@ const LandingPage = () => {
 
 
           {/* Row 4 */}
-          <Grid item xs={12} sx={{display: 'flex', flexDirection: 'column', alignItems: 'center', minHeight:'100vh' }}>
-
-            <Grid items={12} sx={{ textAlign: 'center' }}>
-              <p style={{ fontWeight: 'bold', fontSize: '30px' }}>
+          {/* <Grid  direction={'column'} sx={{height: '100vh', display:'flex', alignItems:'center'}}> */}
+          {/* <Grid flexDirection={'column'}  sx={{padding:'100px 0', display: 'flex', justifyContent: 'center', alignItems: 'center'}}> */}
+          <Grid item spacing={2} sx={{justifyContent:'center', alignItems:'center', height:'100vh'}}>
+            <Grid item xs={12} sx={{ textAlign: 'center', display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop:'35vh',
+          '@media (max-width:600px)':{
+            marginTop:'20vh'
+          }
+          }}>
+              <Typography sx={{fontWeight: 'bold', fontSize: '25px', textAlign: 'center', wordWrap: 'break-word'}} >
                 Discover exciting opportunities that will take you over the edge, craft captivating campaigns that resonate with your audience, and unlock the true joy of creating. With CantusIQ, we're not just another platform; we're your partner on this thrilling adventure.
-              </p>
-            </Grid>
+              </Typography>
 
-            <Grid item xs={6} sx={{ marginTop: '80px', margin: 'auto', width: '50%', display: 'block', justifyContent: 'center' }}  >
-              <Button sx={{
+            </Grid>
+            
+            <Grid item xs={12} sx={{display:'flex',  justifyContent: 'center', alignItems: 'center', marginTop: '24px' }}  >
+              <Button  sx={{
                 borderRadius: '50px', marginTop: '10px', marginRight: '10px', backgroundColor: '#FF7518', color: 'white', border: '4px solid #FF7518',
                 '&:hover': {
                   backgroundColor: '#4B0082',
@@ -150,7 +173,7 @@ const LandingPage = () => {
                 },
               }} variant="outlined">Get Started</Button>
             </Grid>
-
+            
           </Grid>
         </Grid>
 

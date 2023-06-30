@@ -21,7 +21,7 @@ export function Insights() {
           <Typography className={styles.cardStyle} gutterBottom variant="h5" component="div" sx={{color:"white"}} >
             Insights.IQ
           </Typography>
-          <Typography className={styles.cardStyle} variant="body2" sx={{color:'white'}}>
+          <Typography className={`${styles.cardStyle} ${styles.mobileCard2}`} variant="body2" sx={{color:'white'}}>
           Gain a competitive edge in your industry by unleashing the power of data with InsightsIQ; the ultimate analytics tool for creators, enabling informed decisions, optimized strategies, and exponential growth. 
          
           </Typography>
@@ -46,7 +46,7 @@ export  function Brand() {
           <Typography className={styles.cardStyle} gutterBottom variant="h5" component="div" sx={{color:"white"}}>
             Brand.IQ
           </Typography>
-          <Typography className={styles.cardStyle} variant="body2" sx={{color:'white'}}>
+          <Typography className={`${styles.cardStyle} ${styles.mobileCard2}`} variant="body2" sx={{color:'white'}}>
           Craft compelling campaigns, seize new opportunities, and amplify your brand's growth potential with data-driven insights, empowering creators to maximize their brand's reach and increase collaboration opportunities.
           </Typography>
         </CardContent>
@@ -70,7 +70,7 @@ export  function Deal() {
           <Typography className={styles.cardStyle} gutterBottom variant="h5" component="div" sx={{color:"white"}}>
             Deal.IQ
           </Typography>
-          <Typography className={styles.cardStyle} variant="body2" sx={{color:'white'}}>
+          <Typography className={`${styles.cardStyle} ${styles.mobileCard2}`} variant="body2" sx={{color:'white'}}>
           Unlock deal-making excellence with DealIQ, the advanced contract management tool that simplifies negotiations, enhances collaboration, and maximizes the value of every business agreement.
           </Typography>
         </CardContent>
@@ -95,7 +95,7 @@ export function Commerce() {
           <Typography className={styles.cardStyle} gutterBottom variant="h5" component="div" sx={{color:"white"}}>
             Commerce.IQ
           </Typography>
-          <Typography className={styles.cardStyle} variant="body2" sx={{color:'white'}}>
+          <Typography className={`${styles.cardStyle} ${styles.mobileCard2}`} variant="body2" sx={{color:'white'}}>
           Revolutionize your online business with CommerceIQ, the all-in-one e-commerce solution designed to streamline operations, optimize sales performance, and deliver seamless customer experiences.
           </Typography>
         </CardContent>
@@ -111,7 +111,7 @@ export function Athletes() {
           <Typography className={styles.cardStyle} gutterBottom variant="h4" component="div" style={{color:"white"}}>
             Athletes
           </Typography>
-          <Typography className={styles.cardStyle} variant="body2" sx={{minHeight:'60px', color:'white'}} >
+          <Typography className={`${styles.cardStyle} ${styles.mobileCard}`} variant="body2" sx={{minHeight:'60px', color:'white'}} >
           Empowering athletes in the digital era with a comprehensive platform to optimize operations & secure brand deals.
           </Typography>
         <div>
@@ -138,7 +138,7 @@ export function Influencers() {
           <Typography className={styles.cardStyle} gutterBottom variant="h4" component="div" sx={{color:"white"}}>
             Influencers
           </Typography>
-          <Typography className={styles.cardStyle} variant="body2" sx={{minHeight:'60px', color:"white"}}>
+          <Typography className={`${styles.cardStyle} ${styles.mobileCard}`} variant="body2" sx={{minHeight:'60px', color:"white"}}>
           Scale with confidence by leveraging data and insights to amplify your influence and digital impact.
           </Typography>
       <div>
@@ -164,7 +164,7 @@ export function Artists() {
           <Typography className={styles.cardStyle} gutterBottom variant="h4" component="div" sx={{color:"white"}}>
             Artists
           </Typography>
-          <Typography className={styles.cardStyle} variant="body2" sx={{minHeight:'60px', color:'white'}}>
+          <Typography className={`${styles.cardStyle} ${styles.mobileCard}`} variant="body2" sx={{minHeight:'60px', color:'white' }}>
           Experience the power of a centralized platform designed to support independent musicians with all the essential tools needed to manage your career and support your craft.
           </Typography>
 

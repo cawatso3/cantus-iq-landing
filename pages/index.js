@@ -59,7 +59,7 @@ const LandingPage = () => {
           <Navbar />
           {/* Row 1 */}
 
-          <Grid item xs={12} md={12} lg={12} className={`${styles.section} ${styles.carousel} `} sx={{ textAlign: 'center' }} style={{ backgroundImage: `url(${images[currentImage]})` }}>
+          <Grid id={'section1'} item xs={12} md={12} lg={12} className={`${styles.section} ${styles.carousel} `} sx={{ textAlign: 'center' }} style={{ backgroundImage: `url(${images[currentImage]})` }}>
 
             <p className={styles.sectionTitle} style={{ zIndex: 1 }}>
               The #1 CRM Platform For Industry {'  '} <span className={styles.highlightText} style={{ width: '80px', display: 'inline-block' }}>{text}</span>
@@ -78,10 +78,12 @@ const LandingPage = () => {
                 },
               }} variant="contained">Request a Demo</Button>
               <Button style={{ zIndex: 1 }} sx={{
-                borderRadius: '50px', marginTop: '10px', border: '1px solid #FF7518', color: 'white',
+                borderRadius: '50px', marginTop: '10px', border: '4px solid #FF7518', color: 'white',
                 '&:hover': {
                   borderColor: '#4B0082',
-                  backgroundColor: '#4B0082'
+                  backgroundColor: '#4B0082',
+                  color:'#FF7518'
+                  
 
                 },
               }} variant="outlined">Get Started</Button>
@@ -97,7 +99,7 @@ const LandingPage = () => {
 
 
           {/* Row 2 */}
-          <Grid item xs={12} className={`${styles.blueSection} ${styles.centeredSection} ${styles.sectionBackground}`}>
+          <Grid id={'section2'} item xs={12} className={`${styles.blueSection} ${styles.centeredSection} ${styles.sectionBackground}`}>
             <p style={{ color: 'white', fontSize: '40px' }}> Products</p>
           </Grid>
           <Grid item xs={12} sm={6} lg={3} className={`${styles.productColumn} ${styles.sectionBackground}`} >
@@ -127,7 +129,7 @@ const LandingPage = () => {
           </Grid>
 
           {/* Row 3 */}
-          <Grid item xs={12} className={`${styles.centeredSection}`} sx={{ backgroundColor: '#000041' }}>
+          <Grid id={'section3'} item xs={12} className={`${styles.centeredSection}`} sx={{ backgroundColor: '#000041' }}>
             <p style={{ color: 'white', fontSize: '48px', textAlign: 'center' }}> Designed for <span className={styles.highlightText}>Creators</span> in any Industry</p>
           </Grid>
 
@@ -147,25 +149,33 @@ const LandingPage = () => {
           {/* Row 4 */}
           {/* <Grid  direction={'column'} sx={{height: '100vh', display:'flex', alignItems:'center'}}> */}
           {/* <Grid flexDirection={'column'}  sx={{padding:'100px 0', display: 'flex', justifyContent: 'center', alignItems: 'center'}}> */}
-          <Grid item spacing={2} sx={{justifyContent:'center', alignItems:'center', height:'100vh'}}>
-            <Grid item xs={12} sx={{ textAlign: 'center', display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop:'35vh' }}>
+          <Grid id={'section4'} item  sx={{justifyContent:'center', alignItems:'center', height:'100vh'}}>
+            <Grid item xs={12} sx={{ textAlign: 'center', display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop:'35vh',
+          '@media (max-width:600px)':{
+            marginTop:'20vh'
+          }
+          }}>
               <Typography sx={{fontWeight: 'bold', fontSize: '25px', textAlign: 'center', wordWrap: 'break-word'}} >
                 Discover exciting opportunities that will take you over the edge, craft captivating campaigns that resonate with your audience, and unlock the true joy of creating. With CantusIQ, we're not just another platform; we're your partner on this thrilling adventure.
               </Typography>
 
             </Grid>
             
-            <Grid item xs={12} sx={{display:'flex',  justifyContent: 'center', alignItems: 'center' }}  >
+            <Grid item xs={12} sx={{display:'flex',  justifyContent: 'center', alignItems: 'center', marginTop: '24px' }}  >
               <Button  sx={{
                 borderRadius: '50px', marginTop: '10px', marginRight: '10px', backgroundColor: '#FF7518', color: 'white', border: '4px solid #FF7518',
                 '&:hover': {
                   backgroundColor: '#4B0082',
                   border: 'none',
+                 
                 },
               }} variant="contained">Request a Demo</Button>
               <Button sx={{
-                borderRadius: '50px', marginTop: '10px', border: '4px solid #FF7518', color: '#FF7518', fontWeight: 'bold', '&:hover': {
-                  borderColor: '#4B0082',
+                borderRadius: '50px', marginTop: '10px', border: '4px solid #FF7518', color: '#FF7518', fontWeight: 'bold', 
+                '&:hover': {
+                  borderColor:'#4B0082',
+                  border: '4px solid #4B0082',
+                  color:'#4B0082'
                 },
               }} variant="outlined">Get Started</Button>
             </Grid>
