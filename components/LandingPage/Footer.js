@@ -24,7 +24,7 @@ export default function Footer() {
       <Container maxWidth="100%">
         <Grid sx={{ marginTop: '16px' }} container spacing={5}>
           <Grid item xs={6} sm={6} md={6} lg={3}>
-            <Box display="flex" flexDirection="column" sx={{ textAlign: 'center' }}>
+            <Box display="flex" flexDirection="column" sx={{ textAlign: 'center',  color:'white' }}>
             <Link to="section2" smooth={true} duration={500}>
                 <Button className={styles.sectionFooter} color="inherit">
                   About
@@ -44,23 +44,23 @@ export default function Footer() {
             </Box>
           </Grid>
           <Grid item xs={6} sm={6} md={6} lg={3}>
-            <Box display="flex" flexDirection="column" sx={{textAlign:'center'}}>
+            <Box display="flex" flexDirection="column" sx={{textAlign:'center',  color:'white'}}>
             <Link to="section4" smooth={true} duration={500}>
-              <Button className={styles.sectionFooter} color="inherit" >
+              <Button className={styles.sectionFooter}  >
                 Resources
               </Button>
               </Link>
-              <Button className={styles.sectionFooter} color="inherit" >
+              <Button className={styles.sectionFooter}  >
                 Terms & Conditions
               </Button>
-              <Button className={styles.sectionFooter} color="inherit" >
+              <Button className={styles.sectionFooter}  >
                 Privacy Policy
               </Button>
             </Box>
           </Grid>
           <Grid item xs={12} sm={12} md={12} lg={6}>
-            <Box display="flex">
-              <Link className={styles.sectionFooter} href="https://www.facebook.com/" color="inherit">
+            <Box display="flex" sx={{ color:'white'}}>
+              <Link className={styles.sectionFooter} href="https://www.facebook.com/" >
                 <Facebook />
               </Link>
               <Link
@@ -71,16 +71,16 @@ export default function Footer() {
               >
                 <Instagram />
               </Link>
-              <Link className={styles.sectionFooter} href="https://www.twitter.com/" color="inherit">
+              <Link className={styles.sectionFooter} href="https://www.twitter.com/" >
                 <Twitter />
               </Link>
             </Box>
           </Grid>
         </Grid>
         <Box mt={5}>
-          <Typography  style={{paddingBottom: '16px'}} className={styles.sectionFooter} variant="body2" color="text.secondary" align="center">
+          <Typography  style={{paddingBottom: '16px', color:'white'}} className={styles.sectionFooter} variant="body2" color="text.secondary" align="center">
             {"Copyright © "}
-            <Link className={styles.sectionFooter} color="inherit" href="https://www.1601lab.com/">
+            <Link className={styles.sectionFooter}  href="https://www.1601lab.com/">
               1601Lab
             </Link>{" "}
             {new Date().getFullYear()}
