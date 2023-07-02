@@ -106,7 +106,7 @@
 
 .carousel {
   position: relative;
-  background-image: url('/sing.png');
+  /* background-image: url('/sing.png'); */
   background-size: cover;
   background-position: center;
   z-index: 1;
