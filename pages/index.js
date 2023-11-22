@@ -8,6 +8,7 @@ import Button from '@mui/material/Button';
 import { flexbox } from '@mui/system';
 import Footer from '../components/LandingPage/Footer';
 import { useEffect, useState } from 'react';
+import ContactModal from '../components/ContactForm/ContactModal';
 
 
 
@@ -15,6 +16,12 @@ import { useEffect, useState } from 'react';
 
 
 const LandingPage = () => {
+
+  const [openModal, setOpenModal] = useState(false);
+
+  const handleOpenModal = () => setOpenModal(true);
+  const handleCloseModal = () => setOpenModal(false);
+
   const [text, setText] = useState('Creators');
 
   useEffect(() => {
@@ -77,16 +84,18 @@ const LandingPage = () => {
 
                 },
               }} variant="contained">Request a Demo</Button>
-              <Button style={{ zIndex: 1 }} sx={{
+
+              <ContactModal open={openModal}  handleClose={handleCloseModal} />
+              {/* <Button style={{ zIndex: 1 }} sx={{
                 borderRadius: '50px', marginTop: '10px', border: '4px solid #FF7518', color: 'white',
                 '&:hover': {
                   borderColor: '#4B0082',
                   backgroundColor: '#4B0082',
-                  color:'#FF7518'
-                  
+                  color: '#FF7518'
+
 
                 },
-              }} variant="outlined">Get Started</Button>
+              }} variant="outlined">Get Started</Button> */}
             </Grid>
           </Grid>
 
@@ -149,39 +158,44 @@ const LandingPage = () => {
           {/* Row 4 */}
           {/* <Grid  direction={'column'} sx={{height: '100vh', display:'flex', alignItems:'center'}}> */}
           {/* <Grid flexDirection={'column'}  sx={{padding:'100px 0', display: 'flex', justifyContent: 'center', alignItems: 'center'}}> */}
-          <Grid id={'section4'} item  sx={{justifyContent:'center', alignItems:'center', height:'100vh'}}>
-            <Grid item xs={12} sx={{ textAlign: 'center', display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop:'35vh',
-          '@media (max-width:600px)':{
-            marginTop:'20vh'
-          }
-          }}>
-              <Typography sx={{fontWeight: 'bold', fontSize: '25px', textAlign: 'center', wordWrap: 'break-word'}} >
+          <Grid id={'section4'} item sx={{ justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+            <Grid item xs={12} sx={{
+              textAlign: 'center', display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '35vh',
+              '@media (max-width:600px)': {
+                marginTop: '20vh'
+              }
+            }}>
+              <Typography sx={{ fontWeight: 'bold', fontSize: '25px', textAlign: 'center', wordWrap: 'break-word' }} >
                 Discover exciting opportunities that will take you over the edge, craft captivating campaigns that resonate with your audience, and unlock the true joy of creating. With CantusIQ, we're not just another platform; we're your partner on this thrilling adventure.
               </Typography>
 
             </Grid>
-            
-            <Grid item xs={12} sx={{display:'flex',  justifyContent: 'center', alignItems: 'center', marginTop: '24px' }}  >
-              <Button  sx={{
+
+            <Grid item xs={12} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '24px' }}  >
+              <Button sx={{
                 borderRadius: '50px', marginTop: '10px', marginRight: '10px', backgroundColor: '#FF7518', color: 'white', border: '4px solid #FF7518',
                 '&:hover': {
                   backgroundColor: '#4B0082',
                   border: 'none',
-                 
+
                 },
               }} variant="contained">Request a Demo</Button>
-              <Button sx={{
-                borderRadius: '50px', marginTop: '10px', border: '4px solid #FF7518', color: '#FF7518', fontWeight: 'bold', 
+              {/* <Button sx={{
+                borderRadius: '50px', marginTop: '10px', border: '4px solid #FF7518', color: '#FF7518', fontWeight: 'bold',
                 '&:hover': {
-                  borderColor:'#4B0082',
+                  borderColor: '#4B0082',
                   border: '4px solid #4B0082',
-                  color:'#4B0082'
+                  color: '#4B0082'
                 },
-              }} variant="outlined">Get Started</Button>
+              }} variant="outlined">Get Started</Button> */}
             </Grid>
-            
+
           </Grid>
         </Grid>
+        <Grid id={'section5'} item xs={12} sx={{ justifyContent: 'center', alignItems: 'center', textAlign: 'center', backgroundColor: 'black', marginBottom: 'none' }}>
+          {/* <ContactForm /> */}
+        </Grid>
+
 
         <Footer />
       </Container>

@@ -111,7 +111,7 @@ function Navbar() {
           }}>
             Request Demo
           </Button>
-          <Button color="inherit" variant="outlined" sx={{
+          {/* <Button color="inherit" variant="outlined" sx={{
             borderRadius: '50px',
             '&:hover': {
               backgroundColor: '#4B0082',
@@ -121,7 +121,7 @@ function Navbar() {
             }
           }}>
             Sign Up
-          </Button>
+          </Button> */}
         </Box>
       </Toolbar>
     </AppBar>
