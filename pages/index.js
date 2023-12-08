@@ -15,6 +15,7 @@ import ContactModal from '../components/ContactForm/ContactModal';
 
 
 
+
 const LandingPage = () => {
 
   const [openModal, setOpenModal] = useState(false);
@@ -76,7 +77,7 @@ const LandingPage = () => {
             {/* Add your content here */}
 
             <Grid item xs={6} sx={{ marginTop: '80px', margin: 'auto', width: '50%', display: 'block', justifyContent: 'center' }}  >
-              <Button style={{ zIndex: 1 }} sx={{
+              <Button onClick={handleOpenModal} style={{ zIndex: 1 }} sx={{
                 borderRadius: '50px', marginTop: '10px', marginRight: '10px', backgroundColor: '#FF7518', color: 'white', border: '1px solid #FF7518',
                 '&:hover': {
                   backgroundColor: '#4B0082',
@@ -96,6 +97,8 @@ const LandingPage = () => {
 
                 },
               }} variant="outlined">Get Started</Button> */}
+
+              <h3 style={{color:'white'}}>Currently serving U.S. customers only</h3>
             </Grid>
           </Grid>
 
@@ -172,7 +175,7 @@ const LandingPage = () => {
             </Grid>
 
             <Grid item xs={12} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '24px' }}  >
-              <Button sx={{
+              <Button onClick={handleOpenModal} sx={{
                 borderRadius: '50px', marginTop: '10px', marginRight: '10px', backgroundColor: '#FF7518', color: 'white', border: '4px solid #FF7518',
                 '&:hover': {
                   backgroundColor: '#4B0082',

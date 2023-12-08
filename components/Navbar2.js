@@ -27,62 +27,62 @@ const navigateToHomePage = () => {
 };
 
 
-  const [isOpen, setIsOpen] = useState(false);
+//   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleDrawer = (open) => (event) => {
-    if (event && event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
-      return;
-    }
+//   const toggleDrawer = (open) => (event) => {
+//     if (event && event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+//       return;
+//     }
 
-    setIsOpen(open);
-  };
+//     setIsOpen(open);
+//   };
 
-  const list = () => (
-    <Box
-      sx={{ width: 250 }}
-      role="presentation"
-      onClick={toggleDrawer(false)}
-      onKeyDown={toggleDrawer(false)}
-    >
-      <List>
-        <Link to="section2" smooth={true} duration={500}>
-          <ListItem button key="Solutions" component="a" >
-            <ListItemText primary="Solutions" />
-          </ListItem>
-        </Link>
-        <Link to="section3" smooth={true} duration={500}>
-          <ListItem button key="About" component="a">
-            <ListItemText primary="About" />
-          </ListItem>
-        </Link>
-      </List>
-      <Divider />
-      <List>
-        {/* <ListItem button key="Request Demo">
-          <Button variant="contained" sx={{
-            width: '100%', borderRadius: '50px', backgroundColor: '#FF7518',
-            '&:hover': {
-              backgroundColor: '#4B0082',
-              border: 'none',
+//   const list = () => (
+//     <Box
+//       sx={{ width: 250 }}
+//       role="presentation"
+//       onClick={toggleDrawer(false)}
+//       onKeyDown={toggleDrawer(false)}
+//     >
+//       <List>
+//         <Link to="section2" smooth={true} duration={500}>
+//           <ListItem button key="Solutions" component="a" >
+//             <ListItemText primary="Solutions" />
+//           </ListItem>
+//         </Link>
+//         <Link to="section3" smooth={true} duration={500}>
+//           <ListItem button key="About" component="a">
+//             <ListItemText primary="About" />
+//           </ListItem>
+//         </Link>
+//       </List>
+//       <Divider />
+//       <List>
+//         {/* <ListItem button key="Request Demo">
+//           <Button variant="contained" sx={{
+//             width: '100%', borderRadius: '50px', backgroundColor: '#FF7518',
+//             '&:hover': {
+//               backgroundColor: '#4B0082',
+//               border: 'none',
 
-            },
-          }}>
-            Request Demo
-          </Button>
-        </ListItem>
-        <ListItem button key="Sign Up">
-          <Button color="inherit" variant="outlined" sx={{ width: '100%', borderRadius: '50px' }}>
-            Sign Up
-          </Button>
-        </ListItem> */}
-      </List>
-    </Box>
-  );
+//             },
+//           }}>
+//             Request Demo
+//           </Button>
+//         </ListItem>
+//         <ListItem button key="Sign Up">
+//           <Button color="inherit" variant="outlined" sx={{ width: '100%', borderRadius: '50px' }}>
+//             Sign Up
+//           </Button>
+//         </ListItem> */}
+//       </List>
+//     </Box>
+//   );
 
   return (
-    <AppBar sx={{ width: '100%', backgroundColor: 'white', border: '2px solid black', marginTop: '8px', color: 'black' }} position="static">
+    <AppBar sx={{ width: '100%', backgroundColor: 'white', border: '2px solid black', marginTop: '8px', color: 'black', marginBottom:'16px' }} position="static">
       <Toolbar>
-        <IconButton
+        {/* <IconButton
           edge="start"
           color="inherit"
           aria-label="menu"
@@ -93,7 +93,7 @@ const navigateToHomePage = () => {
         </IconButton>
         <Drawer open={isOpen} onClose={toggleDrawer(false)}>
           {list()}
-        </Drawer>
+        </Drawer> */}
         <Typography onClick={navigateToHomePage} variant="h5" component="div" sx={{ flexGrow: 1 }}>
           CantusIQ
           <Typography component="div" sx={{ flexGrow: 1, fontSize: '12px', color: '#4B0082' }}>
@@ -101,7 +101,7 @@ const navigateToHomePage = () => {
           </Typography>
         </Typography>
 
-        <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+        {/* <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
           <Link to="section2" smooth={true} duration={500}>
             <Button color="inherit" >
               Solutions
@@ -112,7 +112,7 @@ const navigateToHomePage = () => {
               About
             </Button>
           </Link>
-          {/* <Button variant="contained" sx={{
+          <Button variant="contained" sx={{
             marginRight: '10px', borderRadius: '50px', backgroundColor: '#FF7518',
             '&:hover': {
               backgroundColor: '#4B0082',
@@ -133,7 +133,7 @@ const navigateToHomePage = () => {
           }}>
             Sign Up
           </Button> */}
-        </Box>
+        {/* </Box> */}
       </Toolbar>
     </AppBar>
   );

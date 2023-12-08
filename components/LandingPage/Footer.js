@@ -50,11 +50,11 @@ export default function Footer() {
           </Grid>
           <Grid item xs={6} sm={6} md={6} lg={3}>
             <Box display="flex" flexDirection="column" sx={{ textAlign: 'center', color: 'white' }}>
-              <Link to="section4" smooth={true} duration={500}>
+              {/* <Link to="section4" smooth={true} duration={500}>
                 <Button className={styles.sectionFooter}  >
                   Resources
                 </Button>
-              </Link>
+              </Link> */}
               {/* <Button className={styles.sectionFooter}  >
                 Terms & Conditions
               </Button> */}

@@ -8,62 +8,94 @@ const style = {
   transform: 'translate(-50%, -50%)',
   width: 400,
   bgcolor: 'background.paper',
+  border: '2px solid #000',
   boxShadow: 24,
   p: 4,
 };
 
 const ContactModal = ({ open, handleClose }) => {
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
+  const [formData, setFormData] = useState({ name: '', email: '', comments: '' });
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-    // Implement the logic to send an email
-    console.log('Email:', email, 'Message:', message);
-    // Close the modal
-    handleClose();
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prevState => ({ ...prevState, [name]: value }));
   };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+  
+    // Prepare data to be sent
+    // const formData = {
+    //   name,
+    //   email,
+    //   comments
+    // };
+  
+    // Send data to the server
+    try {
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+  
+      if (response.ok) {
+        alert('Email sent successfully');
+        // Reset form or additional success actions
+      } else {
+        alert('Failed to send email');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      alert('Error sending email');
+    }
+  };
+  
 
   return (
     <Modal
       open={open}
       onClose={handleClose}
-      aria-labelledby="contact-modal-title"
-      aria-describedby="contact-modal-description"
+      aria-labelledby="contact-form-modal"
+      aria-describedby="contact-form"
     >
       <Box sx={style}>
-        <Typography id="contact-modal-title" variant="h6" component="h2">
+        <Typography id="contact-form-modal" variant="h6" component="h2">
           Contact Us
         </Typography>
-        <Box
-          component="form"
-          sx={{ mt: 2 }}
-          noValidate
-          autoComplete="off"
-          onSubmit={handleSubmit}
-        >
+        <form onSubmit={handleSubmit}>
           <TextField
-            required
             fullWidth
-            label="Email Address"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            sx={{ mb: 2 }}
+            label="Name"
+            name="name"
+            margin="normal"
+            value={formData.name}
+            onChange={handleChange}
           />
           <TextField
-            required
+            fullWidth
+            label="Email"
+            name="email"
+            margin="normal"
+            value={formData.email}
+            onChange={handleChange}
+          />
+          <TextField
             fullWidth
             label="Message"
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
+            name="comments"
+            margin="normal"
             multiline
             rows={4}
-            sx={{ mb: 2 }}
+            value={formData.comments}
+            onChange={handleChange}
           />
-          <Button type="submit" variant="contained" color="primary">
-            Send
+          <Button onClick={handleSubmit} type="submit" variant="contained" sx={{ mt: 2 }}>
+            Send Message
           </Button>
-        </Box>
+        </form>
       </Box>
     </Modal>
   );

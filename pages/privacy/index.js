@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from '../../components/Navbar'
+import Navbar2 from '../../components/Navbar2'
 const PrivacyPolicy = () => {
 
     const policy = 
@@ -57,11 +57,14 @@ word-break: break-word !important;
       }
     </style>
       </div>
+      <div style="color: #595959;font-size: 14px;font-family: Arial;padding-top:16px;">
+      This privacy policy was created using Termly's <a style="color: rgb(48, 48, 241) !important;" href="https://termly.io/products/privacy-policy-generator/">Privacy Policy Generator</a>.
+      </div>
      
     `
   return (
     <>
-    <Navbar />
+    <Navbar2  />
     <div dangerouslySetInnerHTML={{ __html: policy }}></div>
     </>
   )
