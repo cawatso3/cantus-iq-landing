@@ -21,38 +21,40 @@ const ContactModal = ({ open, handleClose }) => {
     setFormData(prevState => ({ ...prevState, [name]: value }));
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
   
-    // Prepare data to be sent
-    // const formData = {
-    //   name,
-    //   email,
-    //   comments
-    // };
+  //   // Prepare data to be sent
+  //   // const formData = {
+  //   //   name,
+  //   //   email,
+  //   //   comments
+  //   // };
   
-    // Send data to the server
-    try {
-      const response = await fetch('/api/send-email', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
+  //   // Send data to the server
+  //   try {
+  //     const response = await fetch('/api/send-email', {
+  //       method: 'POST',
+  //       headers: {
+  //         'Content-Type': 'application/json',
+  //       },
+  //       body: JSON.stringify(formData),
+  //     });
   
-      if (response.ok) {
-        alert('Email sent successfully');
-        // Reset form or additional success actions
-      } else {
-        alert('Failed to send email');
-      }
-    } catch (error) {
-      console.error('Error:', error);
-      alert('Error sending email');
-    }
-  };
+  //     if (response.ok) {
+  //       alert('Email sent successfully');
+  //       // Reset form or additional success actions
+  //     } else {
+  //       alert('Failed to send email');
+  //     }
+  //   } catch (error) {
+  //     console.error('Error:', error);
+  //     alert('Error sending email');
+  //   }
+  // };
   
+
+
 
   return (
     <Modal
@@ -65,7 +67,16 @@ const ContactModal = ({ open, handleClose }) => {
         <Typography id="contact-form-modal" variant="h6" component="h2">
           Contact Us
         </Typography>
-        <form onSubmit={handleSubmit}>
+        <form 
+        action="https://formsubmit.co/contact@cantusiq.com" 
+        method="POST"
+        value="https://www.cantusiq.com"
+        >
+            <input 
+          type="hidden" 
+          name="_captcha" 
+          value="false" // enable captcha
+        />
           <TextField
             fullWidth
             label="Name"
@@ -92,7 +103,7 @@ const ContactModal = ({ open, handleClose }) => {
             value={formData.comments}
             onChange={handleChange}
           />
-          <Button onClick={handleSubmit} type="submit" variant="contained" sx={{ mt: 2 }}>
+          <Button type="submit" variant="contained" sx={{ mt: 2 }}>
             Send Message
           </Button>
         </form>
